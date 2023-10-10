@@ -33,15 +33,11 @@ import AudioStreaming
         if let data = Data(base64Encoded: value) {
             print(data)
             let tempDir = FileManager.default.temporaryDirectory
-            let filename = UUID().uuidString + ".mp3"
+            let filename = ProcessInfo().globallyUniqueString + ".mp3"
             let tempUrl = tempDir.appendingPathComponent(filename)
             do {
                 try data.write(to: tempUrl)
-                if(player.isEngineRunning) {
-                    player.queue(url: tempUrl)
-                } else {
-                    player.play(url: tempUrl)
-                }
+                player.queue(url: tempUrl)
             }
             catch {
             }

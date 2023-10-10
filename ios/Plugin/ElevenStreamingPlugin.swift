@@ -17,6 +17,7 @@ public class ElevenStreamingPlugin: CAPPlugin {
 //    }
 
     @objc func initStream(_ call: CAPPluginCall) {
+        implementation.initStream()
         call.resolve([
             "value": "init"
         ])

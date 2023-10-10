@@ -13,32 +13,15 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
 * [`initStream()`](#initstream)
-* [`play()`](#play)
-* [`pause()`](#pause)
-* [`createBuffer()`](#createbuffer)
-* [`addBuffer(...)`](#addbuffer)
+* [`stop()`](#stop)
+* [`flushBuffer()`](#flushbuffer)
+* [`playChunk(...)`](#playchunk)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### echo(...)
-
-```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
-```
-
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
-
---------------------
-
 
 ### initStream()
 
@@ -49,37 +32,28 @@ initStream() => Promise<void>
 --------------------
 
 
-### play()
+### stop()
 
 ```typescript
-play() => Promise<void>
+stop() => Promise<void>
 ```
 
 --------------------
 
 
-### pause()
+### flushBuffer()
 
 ```typescript
-pause() => Promise<void>
+flushBuffer() => Promise<void>
 ```
 
 --------------------
 
 
-### createBuffer()
+### playChunk(...)
 
 ```typescript
-createBuffer() => Promise<void>
-```
-
---------------------
-
-
-### addBuffer(...)
-
-```typescript
-addBuffer(opts: { buffer: string; }) => Promise<boolean>
+playChunk(opts: { buffer: string; }) => Promise<boolean>
 ```
 
 | Param      | Type                             |
