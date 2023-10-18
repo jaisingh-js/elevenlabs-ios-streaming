@@ -46,7 +46,6 @@ import AVFoundation
                 let playerItem = AVPlayerItem(url: tempUrl)
                 queuePlayer.insert(playerItem, after: nil)
                 queuePlayer.play()
-//                player.queue(url: tempUrl)
             }
             catch {
                 print("error playing wav chunk")

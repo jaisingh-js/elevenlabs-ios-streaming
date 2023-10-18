@@ -14,5 +14,3 @@ end
 target 'PluginTests' do
   capacitor_pods
 end
-
-pod 'AudioStreaming'
